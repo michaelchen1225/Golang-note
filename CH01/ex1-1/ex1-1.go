@@ -18,8 +18,8 @@ var helloList = []string{
 }
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
-	index := rand.Intn(len(helloList))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	index := r.Intn(len(helloList))
 	msg, err := hello(index)
 	if err != nil {
 		log.Fatal(err)
