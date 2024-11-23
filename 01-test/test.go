@@ -2,10 +2,13 @@ package main
 
 import "fmt"
 
+var sum int = 0
+
 func main() {
 
-	for i, c := range "hello" {
-		fmt.Printf("%d: %c\n", i, c)
+	for i := range 11 {
+		sum += i
 	}
+	fmt.Println(sum)
 
 }
