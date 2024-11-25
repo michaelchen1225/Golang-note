@@ -2,13 +2,11 @@ package main
 
 import "fmt"
 
-var sum int = 0
-
 func main() {
+	str1 := "你好"
+	// myrune := []rune(str1)
 
-	for i := range 11 {
-		sum += i
+	for i, v := range str1 {
+		fmt.Printf("index: %d, value: %c, type: %T\n", i, v, v)
 	}
-	fmt.Println(sum)
-
 }
